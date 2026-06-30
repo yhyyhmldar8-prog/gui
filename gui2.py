@@ -6,7 +6,7 @@ app = QApplication([])
 
 window = QWidget()
 window.setWindowTitle("first project")
-window.resize( 720 , 500 )
+window.setGeometry( 0 , 0 , 720 , 500 )
 
 label = QLabel ("hello world" , window)
 label.setGeometry(100 , 10 , 200 , 200)
