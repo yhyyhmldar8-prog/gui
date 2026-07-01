@@ -4,9 +4,9 @@ def h():
     label.setText("connected")
     button.setText("hehehe")
     button.setEnabled(False)
-    label.hide()
+    label.setVisible(False)
 def g():
-    label.show()
+    label.setVisible(True)
 app = QApplication([])
 font = QFont("Arial", 10)
 
