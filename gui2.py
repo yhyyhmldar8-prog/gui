@@ -1,6 +1,9 @@
 from PySide6.QtWidgets import * 
 from PySide6.QtGui import QFont
 from PySide6.QtCore import Qt
+def x():
+   print(label.isVisible())
+   print(button.isEnabled())
 def h():
     label.setText("connected")
     button.setText("hehehe")
@@ -10,6 +13,7 @@ def h():
     label.setGeometry( 0 ,0 ,200 , 10)
 def g():
     label.setEnabled(True)
+    window.close()
 def z():
     label.setText("its a joke dont angry")
     buttom.setStyleSheet(" color: red ; background-color:green")
@@ -19,7 +23,7 @@ font1 = QFont("Arial" , 15)
 
 window = QWidget()
 window.setWindowTitle("first project")
-window.setGeometry( 0 , 0 , 720 , 500 )
+window.setFixedSize(720 , 720)
 
 label = QLabel ("hello world" , window)
 label.setGeometry(0 , 0 , 300 , 20)
@@ -41,6 +45,10 @@ buttom.setGeometry( 20, 20 , 100,100 )
 buttom.clicked.connect(z)
 buttom.setFont(font1)
 buttom.setToolTip("if you click this button you will die or get rich")
+
+but = QPushButton("setvisiable or enable" , window)
+but.clicked.connect(x)
+but.setGeometry(500 , 500 , 20 , 10)
 window.show()
 
 app.exec()
