@@ -45,10 +45,17 @@ buttom.setGeometry( 20, 20 , 100,100 )
 buttom.clicked.connect(z)
 buttom.setFont(font1)
 buttom.setToolTip("if you click this button you will die or get rich")
+def k():
+    print(inpot.text())
+t = QPushButton("he" , window)
+t.clicked.connect(k)
+
+inpot = QLineEdit(window)
+inpot.setGeometry(0 , 500 , 100 , 20)
 
 but = QPushButton("setvisiable or enable" , window)
 but.clicked.connect(x)
-but.setGeometry(500 , 500 , 20 , 10)
+but.setGeometry(500 , 500 , 200 , 100)
 window.show()
 
 app.exec()
